@@ -6,4 +6,4 @@ This project is built on the foundation of **search.0t.rocks**. I’ve open-sour
 ## Add Data
 ```bash
 bin/post -c BigData sample.json
-```# Search
+```
