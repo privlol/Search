@@ -22,7 +22,7 @@
     "coinbase-commerce-node": "^1.0.4",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
-    "ip": "^1.1.8",
+    "ip": "^2.0.1",
     "lodash": "^4.17.21",
     "lusca": "^1.7.0",
     "mustache": "^4.2.0",
