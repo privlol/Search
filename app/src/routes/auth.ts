@@ -15,6 +15,7 @@ const authRouter = Router();
 // Read allow registrations setting from environment variables
 const allowRegistrations = process.env.ALLOW_REGISTRATIONS === 'true';
 
+
 authRouter.get('/login', async (req, res) => {
     const rendered = mustache.render(loginTemplate, { error: null });
     return res.send(rendered);

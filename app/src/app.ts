@@ -13,6 +13,8 @@ import exportsRouter from './routes/exports';
 import recordsRouter from './routes/records';
 import spatialRouter from './routes/spatial';
 
+
+
 import mustache from 'mustache';
 import fs from 'fs';
 
@@ -40,12 +42,14 @@ const basic = crypto.createHash('sha256').update(hlrToken + ':' + hlrSecret).dig
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(sessionMiddleware);
+app.use(...sessionMiddleware); // Apply session middleware
 
 app.use(express.static(path.join(__dirname, '/static')));
 
 // Routes
 app.use('/', authRouter);
+
+
 
 // Root route
 app.get('/', (req: Request, res: Response) => {
@@ -84,5 +88,6 @@ app.use('/documents', documentsRouter);
 app.use('/exports', exportsRouter);
 app.use('/records', recordsRouter);
 app.use('/spatial', spatialRouter);
+app.use(...sessionMiddleware);
 
 export default app;
