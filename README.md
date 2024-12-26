@@ -3,7 +3,7 @@
 This project is built on the foundation of **search.0t.rocks**. I’ve open-sourced my version and made significant improvements, including a complete cleanup of the original codebase. The initial implementation was highly disorganized—possibly by design—but I’ve restructured and optimized it for better clarity and maintainability. My goal is to keep this version continuously updated, enhanced, and user-friendly.
 
 
-## Data
+## Data Handling
 
 ### Add Data
 Download the Solr binary
@@ -12,63 +12,65 @@ And make sure the json file is in **jsonl** format but the extension is json.
 bin/post -c BigData sample.json
 ```
 
-<details>
-<summary>Click to expand the list of Record Types</summary>
+### Record Types
 
-accuracy_radius
-address
-asn
-asnOrg
-autoBody
-autoClass
-autoMake
-autoModel
-autoYear
-bankAccountNumbers
-birthMonth
-birthYear
-birthday
-certifications
-city
-continent
-country
-creditExpiration
-creditNumber
-creditPin
-debitExpiration
-debitNumber
-debitPin
-dob
-domain
-emails
-ethnicity
-firstName
-gender
-income
-ips
-lastName
-latLong
-licenseNumber
-line
-links
-location
-middleName
-militaryID
-notes
-party
-passportNumber
-passwords
-phoneNumbers
-photos
-politicalAffiliation
-schoolsAttended
-source
-ssn
-state
-usernames
-vin
-VRN
-zipCode
+<details>
+<summary>List of record types</summary>
+
+- accuracy_radius
+- address
+- asn
+- asnOrg
+- autoBody
+- autoClass
+- autoMake
+- autoModel
+- autoYear
+- bankAccountNumbers
+- birthMonth
+- birthYear
+- birthday
+- certifications
+- city
+- continent
+- country
+- creditExpiration
+- creditNumber
+- creditPin
+- debitExpiration
+- debitNumber
+- debitPin
+- dob
+- domain
+- emails
+- ethnicity
+- firstName
+- gender
+- income
+- ips
+- lastName
+- latLong
+- licenseNumber
+- line
+- links
+- location
+- middleName
+- militaryID
+- notes
+- party
+- passportNumber
+- passwords
+- phoneNumbers
+- photos
+- politicalAffiliation
+- schoolsAttended
+- source
+- ssn
+- state
+- usernames
+- vin
+- VRN
+- zipCode
 </details>
 <details>
 <summary>Record Format Examples</summary>

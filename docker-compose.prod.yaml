@@ -9,6 +9,8 @@ services:
       PGUSER: search
       PGPASSWORD: search
       PGDATABASE: search
+      COOKIE_SECURE: true
+      SESSION_SECRET: SECRET # Change this to a random string otherwise it will be insecure
     depends_on:
       - postgres
     networks:

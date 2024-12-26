@@ -9,6 +9,7 @@ services:
       PGUSER: search
       PGPASSWORD: search
       PGDATABASE: search
+      COOKIE_SECURE: false
     depends_on:
       - postgres
     networks:
