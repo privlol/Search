@@ -1,6 +1,5 @@
 echo "Creating Database"
 echo "If you have defined a different port for your solr server please edit this file's linked ports"
-
 # Create collection for data
 curl "http://127.0.0.1:8983/solr/admin/collections?action=CREATE&name=BigData&numShards=8&replicationFactor=3&wt=json" 
 

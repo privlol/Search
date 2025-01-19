@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import crypto from 'crypto';
 import path from 'path';
 import rateLimit from 'express-rate-limit';
-import helmet from 'helmet';
-import morgan from 'morgan';
+// import helmet from 'helmet';
+// import morgan from 'morgan';
 import mustache from 'mustache';
 import fs from 'fs';
 
@@ -39,10 +39,10 @@ const hlrSecret = process.env.HLR_SECRET || '';
 const basic = crypto.createHash('sha256').update(hlrToken + ':' + hlrSecret).digest('hex');
 
 // Security middleware
-app.use(helmet());
+// app.use(helmet());
 
-// Logging middleware
-app.use(morgan('combined'));
+// // Logging middleware
+// app.use(morgan('combined'));
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -85,10 +85,6 @@ app.get('/', (req: Request, res: Response) => {
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
 });
 
 export default app;
